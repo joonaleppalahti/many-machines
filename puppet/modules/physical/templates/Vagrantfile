@@ -1,0 +1,26 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+  config.vm.box = "hashicorp/presice64"
+  config.vm.provision :shell, path: "provision.sh"
+
+  #Define virtual machines
+    config.vm.define "t01" do |t01|
+      t01.vm.box = "hashicorp/precise64"
+    end
+
+#    config.vm.define "t02" do |t02|
+#      t02.vm.box = "hashicorp/precise64"
+#    end
+
+
+  # Create a public network, which generally matched to bridged network.
+  config.vm.network "public_network", bridge: "enp63s0"
+
+  # Provider-specific configuration
+    config.vm.provider "virtualbox" do |vb|
+  #  Customize the amount of memory on the VM:
+     vb.memory = "128"
+    end
+end
