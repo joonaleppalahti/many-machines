@@ -1,5 +1,12 @@
 class physical {
 
+	Package { ensure => "installed" }
+
+	package { virtualbox: }
+	package { vagrant: 
+		require => Package["virtualbox"],
+	}
+
 	file { "/home/joona/vagrantinstall":
 		ensure => "directory",
 		owner => "joona",
@@ -28,6 +35,7 @@ class physical {
 		user => "joona",
 		path => "/bin/:/usr/bin/:/sbin/:/usr/sbin/",
 		environment => ["HOME=/home/joona"],
+		require => [ Package["vagrant"], File["/home/joona/vagrantinstall/Vagrantfile"], File["/home/joona/vagrantinstall/provision.sh"] ],
 	}
 
 }
