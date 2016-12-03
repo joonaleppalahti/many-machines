@@ -1,6 +1,6 @@
 # Automatically configure many virtual machines inside many physical machines 
 
-## Work in progress!
+## Run serverinstall.sh to set up server
 
 ### PXE and DHCP file locations
 
