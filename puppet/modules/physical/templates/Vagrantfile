@@ -10,10 +10,13 @@ Vagrant.configure(2) do |config|
       t01.vm.box = "hashicorp/precise64"
     end
 
-#    config.vm.define "t02" do |t02|
-#      t02.vm.box = "hashicorp/precise64"
-#    end
+    config.vm.define "t02" do |t02|
+      t02.vm.box = "hashicorp/precise64"
+    end
 
+    config.vm.define "t03" do |t03|
+      t03.vm.box = "hashicorp/precise64"
+    end
 
   # Create a public network, which generally matched to bridged network.
   config.vm.network "public_network", bridge: "enp63s0"
@@ -21,6 +24,6 @@ Vagrant.configure(2) do |config|
   # Provider-specific configuration
     config.vm.provider "virtualbox" do |vb|
   #  Customize the amount of memory on the VM:
-     vb.memory = "128"
+     vb.memory = "256"
     end
 end

@@ -1,22 +1,33 @@
 class physical {
 
-	file { "/etc/vagrantinstall":
-		ensure => "directory"
+	file { "/home/joona/vagrantinstall":
+		ensure => "directory",
+		owner => "joona",
+		group => "joona",
+		mode => 0755,
 	}
 
-	file { "/etc/vagrantinstall/Vagrantfile":
+	file { "/home/joona/vagrantinstall/Vagrantfile":
 		content => template("physical/Vagrantfile"),
+		owner => "joona",
+		group => "joona",
+		mode => 0644,
 	}
 
-	file { "/etc/vagrantinstall/provision.sh":
+	file { "/home/joona/vagrantinstall/provision.sh":
 		content => template("physical/provision.sh"),
+		owner => "joona",
+		group => "joona",
+		mode => 0755,
 	}
 
 	exec { "vagrant up":
 		timeout => 0,
-		command => "sudo vagrant up",
+		command => "vagrant up",
+		cwd => "/home/joona/vagrantinstall",
+		user => "joona",
 		path => "/bin/:/usr/bin/:/sbin/:/usr/sbin/",
-		cwd => "/etc/vagrantinstall"
+		environment => ["HOME=/home/joona"],
 	}
 
 }
