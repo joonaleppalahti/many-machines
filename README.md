@@ -1,6 +1,6 @@
 # Automatically configure virtual machines in physical machines using PXE, Puppet and Vagrant 
 
-## Replace server IP-address in config files and run `sudo serverinstall.sh` to set up server
+## Some assembly required! Edit config files and run `sudo serverinstall.sh` to set up server
 
 `Wakeonlan 12:34:56:78:90:ab` to wake up target machine. Installations might take a while,
 but at the end the target machine should be running Ubuntu 16.04 64-bit. Inside the target machine
