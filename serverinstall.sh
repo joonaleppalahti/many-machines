@@ -21,19 +21,21 @@ sudo service avahi-daemon restart
 
 filepath=/home/xubuntu/many-machines
 
-sudo cp -r $filepath/puppet /etc/
+sudo cp -rv $filepath/puppet /etc/
 
-sudo apt-get -y install puppetmaster wakeonlan isc-dhcp-server tftpd-hpa
+sudo apt-get -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" install -y puppetmaster wakeonlan isc-dhcp-server tftpd-hpa
 
-sudo cp $filepath/manyisc-dhcp-server /etc/default/
-sudo cp $filepath/dhcpd.conf /etc/dhcp/
+sudo cp -v $filepath/isc-dhcp-server /etc/default/
+sudo cp -v $filepath/dhcpd.conf /etc/dhcp/
 
 sudo service isc-dhcp-server restart
 
 sudo wget http://archive.ubuntu.com/ubuntu/dists/xenial-updates/main/installer-amd64/current/images/netboot/netboot.tar.gz -O /var/lib/tftpboot/netboot.tar.gz
 sudo tar -xvf /var/lib/tftpboot/netboot.tar.gz -C /var/lib/tftpboot/
 
-sudo cp $filepath/syslinux.cfg /var/lib/tftpboot/ubuntu-installer/amd64/boot-screens/
-sudo cp $filepath/preseed.cfg /var/lib/tftpboot/ubuntu-installer/amd64/
-sudo cp $filepath/postinstall.sh /var/lib/tftpboot/
-sudo cp $filepath/firstboot /var/lib/tftpboot/
+sudo cp -v $filepath/syslinux.cfg /var/lib/tftpboot/ubuntu-installer/amd64/boot-screens/
+sudo cp -v $filepath/preseed.cfg /var/lib/tftpboot/ubuntu-installer/amd64/
+sudo cp -v $filepath/postinstall.sh /var/lib/tftpboot/
+sudo cp -v $filepath/firstboot /var/lib/tftpboot/
+
+echo "done"
