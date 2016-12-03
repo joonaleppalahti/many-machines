@@ -1,6 +1,10 @@
-# Automatically configure many virtual machines inside many physical machines 
+# Automatically configure virtual machines in physical machines using PXE, Puppet and Vagrant 
 
-## Run serverinstall.sh to set up server
+## Replace server IP-address in config files and run serverinstall.sh to set up server
+
+Wakeonlan 12:34:56:78:90:ab to wake up target machine. Installations might take a while,
+but at the end the target machine should be running Ubuntu 16.04 64-bit. Inside the target machine
+should be Ubuntu 12.04 64-bit virtual machines running with VirtualBox and Vagrant.
 
 ### PXE and DHCP file locations
 
