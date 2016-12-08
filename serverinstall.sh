@@ -23,7 +23,7 @@ filepath=/home/xubuntu/many-machines
 
 sudo cp -rv $filepath/puppet /etc/
 
-sudo apt-get -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" install -y puppetmaster wakeonlan isc-dhcp-server tftpd-hpa
+sudo apt-get -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" install -y puppetmaster wakeonlan isc-dhcp-server tftpd-hpa squid-deb-proxy
 
 sudo cp -v $filepath/isc-dhcp-server /etc/default/
 sudo cp -v $filepath/dhcpd.conf /etc/dhcp/
