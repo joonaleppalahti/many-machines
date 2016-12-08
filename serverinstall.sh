@@ -30,6 +30,7 @@ sudo cp -v $filepath/dhcpd.conf /etc/dhcp/
 
 sudo service isc-dhcp-server restart
 
+sudo wget https://atlas.hashicorp.com/hashicorp/boxes/precise64/versions/1.1.0/providers/virtualbox.box -O /etc/puppet/modules/physical/files/precise64.box
 sudo wget http://archive.ubuntu.com/ubuntu/dists/xenial-updates/main/installer-amd64/current/images/netboot/netboot.tar.gz -O /var/lib/tftpboot/netboot.tar.gz
 sudo tar -xvf /var/lib/tftpboot/netboot.tar.gz -C /var/lib/tftpboot/
 

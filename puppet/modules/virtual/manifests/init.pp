@@ -1,8 +1,5 @@
 class virtual {
-	file { "/tmp/virtualjuttu":
-		content => "Hello Virtual World \n"
+	file { "/tmp/testfile":
+		content => "Hello Virtual World! \n"
 	}
-
-	
-
 }

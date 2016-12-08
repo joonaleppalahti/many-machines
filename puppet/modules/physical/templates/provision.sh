@@ -41,7 +41,7 @@ ssl_client_header = SSL_CLIENT_S_DN
 ssl_client_verify_header = SSL_CLIENT_VERIFY
 
 [agent]
-server = PXEMaster.local
+server = 192.168.1.129
 
 EOF
 

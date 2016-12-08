@@ -7,14 +7,11 @@ class physical {
 		require => Package["virtualbox"],
 	}
 
-	file { [ "/home/joona/.vagrant.d/", "/home/joona/.vagrant.d/boxes" ]:
-		ensure => "directory",
-	}
-
-	file { "/home/joona/.vagrant.d/boxes/hashicorp-VAGRANTSLASH-precise64":
-		ensure => directory,
-		recurse => remote,
-		source => "puppet:///modules/physical/hashicorp-VAGRANTSLASH-precise64",
+	file { "/home/joona/precise64.box":
+		source => "puppet:///modules/physical/precise64.box",
+		owner => "joona",
+		group => "joona",
+		mode => 0644,
 	}
 
 	file { "/home/joona/vagrantinstall":
@@ -45,7 +42,7 @@ class physical {
 		user => "joona",
 		path => "/bin/:/usr/bin/:/sbin/:/usr/sbin/",
 		environment => ["HOME=/home/joona"],
-		require => [ Package["vagrant"], File["/home/joona/vagrantinstall/Vagrantfile"], File["/home/joona/vagrantinstall/provision.sh"] ],
+		require => [ Package["vagrant"], File["/home/joona/vagrantinstall/Vagrantfile"], File["/home/joona/vagrantinstall/provision.sh"], File["/home/joona/precise64.box"] ],
 	}
 
 }

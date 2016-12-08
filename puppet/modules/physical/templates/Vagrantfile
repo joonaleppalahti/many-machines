@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 Vagrant.configure(2) do |config|
-  config.vm.box = "hashicorp/presice64"
+  config.vm.box_url = "file:///home/joona/precise64.box"
   config.vm.provision :shell, path: "provision.sh"
 
   #Define virtual machines
@@ -18,8 +18,75 @@ Vagrant.configure(2) do |config|
       t03.vm.box = "hashicorp/precise64"
     end
 
+    config.vm.define "t04" do |t04|
+      t04.vm.box = "hashicorp/precise64"
+    end
+
+    config.vm.define "t05" do |t05|
+      t05.vm.box = "hashicorp/precise64"
+    end
+
+    config.vm.define "t06" do |t06|
+      t06.vm.box = "hashicorp/precise64"
+    end
+
+    config.vm.define "t07" do |t07|
+      t07.vm.box = "hashicorp/precise64"
+    end
+
+    config.vm.define "t08" do |t08|
+      t08.vm.box = "hashicorp/precise64"
+    end
+
+    config.vm.define "t09" do |t09|
+      t09.vm.box = "hashicorp/precise64"
+    end
+
+    config.vm.define "t10" do |t10|
+      t10.vm.box = "hashicorp/precise64"
+    end
+
+    config.vm.define "t11" do |t11|
+      t11.vm.box = "hashicorp/precise64"
+    end
+
+    config.vm.define "t12" do |t12|
+      t12.vm.box = "hashicorp/precise64"
+    end
+
+    config.vm.define "t13" do |t13|
+      t13.vm.box = "hashicorp/precise64"
+    end
+
+    config.vm.define "t14" do |t14|
+      t14.vm.box = "hashicorp/precise64"
+    end
+
+    config.vm.define "t15" do |t15|
+      t15.vm.box = "hashicorp/precise64"
+    end
+    config.vm.define "t16" do |t16|
+      t16.vm.box = "hashicorp/precise64"
+    end
+
+    config.vm.define "t17" do |t17|
+      t17.vm.box = "hashicorp/precise64"
+    end
+
+    config.vm.define "t18" do |t18|
+      t18.vm.box = "hashicorp/precise64"
+    end
+
+    config.vm.define "t19" do |t19|
+      t19.vm.box = "hashicorp/precise64"
+    end
+
+    config.vm.define "t20" do |t20|
+      t20.vm.box = "hashicorp/precise64"
+    end
+
   # Create a public network, which generally matched to bridged network.
-  config.vm.network "public_network", bridge: "enp63s0"
+  #  config.vm.network "public_network", bridge: "enp63s0"
 
   # Provider-specific configuration
     config.vm.provider "virtualbox" do |vb|
