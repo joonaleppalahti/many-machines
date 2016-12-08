@@ -7,6 +7,16 @@ class physical {
 		require => Package["virtualbox"],
 	}
 
+	file { [ "/home/joona/.vagrant.d/", "/home/joona/.vagrant.d/boxes" ]:
+		ensure => "directory",
+	}
+
+	file { "/home/joona/.vagrant.d/boxes/hashicorp-VAGRANTSLASH-precise64":
+		ensure => directory,
+		recurse => remote,
+		source => "puppet:///modules/physical/hashicorp-VAGRANTSLASH-precise64",
+	}
+
 	file { "/home/joona/vagrantinstall":
 		ensure => "directory",
 		owner => "joona",
