@@ -1,5 +1,4 @@
 #!/bin/bash
-# Tested on live Xubuntu 16.04.1 64-bit
 
 sudo cat <<EOF > /etc/hosts
 
