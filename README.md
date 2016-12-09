@@ -2,11 +2,8 @@
 
 ## Some assembly required! Edit config files and run `sudo serverinstall.sh` to set up server
 
-`Wakeonlan 12:34:56:78:90:ab` to wake up target machine. Installations might take a while,
-but at the end the target machine should be running Ubuntu 16.04 64-bit. Inside the target machine
-should be Ubuntu 12.04 64-bit virtual machines running with VirtualBox and Vagrant.
-
-### PXE and DHCP file locations
+### Edit these files in many-machines directory, before running serverinstall.sh.
+Below are their paths if you need to edit them later.
 
 * /var/lib/tftpboot/ubuntu-installer/amd64/preseed.cfg
 * /var/lib/tftpboot/ubuntu-installer/amd64/boot-screens/syslinux.cfg
@@ -14,6 +11,14 @@ should be Ubuntu 12.04 64-bit virtual machines running with VirtualBox and Vagra
 * /etc/dhcp/dhcpd.conf
 * /var/lib/tftpboot/postinstall.sh
 * /var/lib/tftpboot/firstboot
+* /etc/puppet/puppet.conf
+* /etc/puppet/modules/physical/templates/provision.sh
+* /etc/puppet/modules/physical/templates/Vagrantfile
+
+`Wakeonlan 12:34:56:78:90:ab` to wake up target machine. Installations might take a while,
+but at the end the target machine should be running Ubuntu 16.04 64-bit. Inside the target machine
+should be Ubuntu 12.04 64-bit virtual machines running with VirtualBox and Vagrant. Username used for configurations
+is "joona", you need to edit multiple files to change it.
 
 ### Sources used
 
