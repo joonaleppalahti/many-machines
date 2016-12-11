@@ -30,8 +30,8 @@ is "joona", you need to edit multiple files to change it.
 * http://www.50ply.com/blog/2012/07/16/automating-debian-installs-with-preseed-and-puppet/
 * https://stackoverflow.com/questions/2500436/how-does-cat-eof-work-in-bash
 * https://askubuntu.com/questions/104899/make-apt-get-or-aptitude-run-with-y-but-not-prompt-for-replacement-of-configu
-* http://stackoverflow.com/a/17316902
-* http://serverfault.com/a/587199
+* https://stackoverflow.com/questions/17310333/require-puppet-to-place-a-file-before-starting-service/17316902#17316902
+* https://serverfault.com/questions/586472/puppet-create-service-before-file-but-notify-service-if-file-changes/587199#587199
 * https://eureka.ykyuen.info/2014/09/23/puppet-run-exec-as-a-specific-user/
 * https://stackoverflow.com/questions/30194647/puppet-set-global-timeout-for-exec
 * http://grokbase.com/t/gg/puppet-users/1276gp4kxy/how-do-i-cd-change-directory-with-puppets-exec
