@@ -37,3 +37,4 @@ is "joona", you need to edit multiple files to change it.
 * http://grokbase.com/t/gg/puppet-users/1276gp4kxy/how-do-i-cd-change-directory-with-puppets-exec
 * https://docs.puppet.com/puppet/3.8/lang_node_definitions.html#regular-expression-names
 * https://manski.net/2016/09/vagrant-multi-machine-tutorial/
+* https://www.vagrantup.com/docs/vagrantfile/machine_settings.html
