@@ -10,10 +10,8 @@ Below are their paths if you need to edit them later.
 * /etc/default/isc-dhcp-server
 * /etc/dhcp/dhcpd.conf
 * /var/lib/tftpboot/postinstall.sh
-* /var/lib/tftpboot/firstboot
 * /etc/puppet/puppet.conf
 * /etc/puppet/modules/physical/templates/provision.sh
-* /etc/puppet/modules/physical/templates/Vagrantfile
 
 `Wakeonlan 12:34:56:78:90:ab` to wake up target machine. Installations might take a while,
 but at the end the target machine should be running Ubuntu 16.04 64-bit. Inside the target machine
