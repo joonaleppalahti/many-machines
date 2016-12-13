@@ -1,5 +1,4 @@
 #!/bin/bash
-# Tested on live Xubuntu 16.04.1 64-bit
 
 sudo cat <<EOF > /etc/hosts
 
@@ -19,7 +18,7 @@ EOF
 sudo hostnamectl set-hostname PXEMaster
 sudo service avahi-daemon restart
 
-filepath=/home/xubuntu/many-machines
+filepath=/home/joona/many-machines
 
 sudo cp -rv $filepath/puppet /etc/
 
