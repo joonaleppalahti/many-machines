@@ -4,7 +4,7 @@
 serverdefgateway=192.168.1.1
 
 # Replace "enp0s3" with your network card ID
-serversubnet=$(facter | grep "network_$serverinterface" | sed 's/^network_enp0s3 => //')
+serversubnet=$(facter | grep "network_enp0s3" | sed 's/^network_enp0s3 => //')
 
 filepath=/home/joona/many-machines
 serverip=$(facter | grep "ipaddress =>" | sed 's/^ipaddress => //')
