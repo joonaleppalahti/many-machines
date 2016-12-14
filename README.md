@@ -20,7 +20,7 @@ is "joona", you need to edit multiple files to change it.
 
 ## experimental.serverinstall.sh
 
-I made a new installation script that handles almost everything. You only need to change server IP-address on line 44 in provision.sh in many-machines directory, default gateway on line 4 in experimental.serverinstall.sh and both instances of "enp0s3" on line 7 to match your network adapter. After making the changes, run `sudo ./experimental.serverinstall.sh` and the server should be configured in a minute.
+I made a new installation script that handles almost everything. You only need to change server IP-address on line 44 in provision.sh in many-machines directory, default gateway on line 4 in experimental.serverinstall.sh and both instances of "enp0s3" on line 7 to match your network adapter. After making the changes, make sure you have facter installed `sudo apt-get -y install facter` and run `sudo ./experimental.serverinstall.sh` and the server should be configured in a minute.
 
 ### Sources used
 
