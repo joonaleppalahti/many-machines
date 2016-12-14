@@ -18,6 +18,10 @@ but at the end the target machine should be running Ubuntu 16.04 64-bit. Inside 
 should be Ubuntu 12.04 64-bit virtual machines running with VirtualBox and Vagrant. Username used for configurations
 is "joona", you need to edit multiple files to change it.
 
+## experimental.serverinstall.sh
+
+I made a new installation script that handles almost everything. You only need to change server IP-address on line 44 in provision.sh in many-machines directory, default gateway on line 4 in experimental.serverinstall.sh and both instances of "enp0s3" on line 7 to match your network adapter. After making the changes, run ´sudo ./experimental.serverinstall.sh´ and the server should be configured in a minute.
+
 ### Sources used
 
 * http://terokarvinen.com/2016/aikataulu-palvelinten-hallinta-ict4tn022-1-5-op-uusi-ops-loppusyksy-2016
@@ -36,3 +40,5 @@ is "joona", you need to edit multiple files to change it.
 * https://docs.puppet.com/puppet/3.8/lang_node_definitions.html#regular-expression-names
 * https://manski.net/2016/09/vagrant-multi-machine-tutorial/
 * https://www.vagrantup.com/docs/vagrantfile/machine_settings.html
+* https://askubuntu.com/questions/520080/remove-the-first-part-of-a-string-using-sed
+* https://stackoverflow.com/questions/18602234/sed-to-remove-everything-after-in-file-using-command
